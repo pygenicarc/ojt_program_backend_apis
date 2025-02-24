@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student data</title>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>student name</th>
+    <th>student age</th>
+    <th>student dept</th>
+  </tr>
+    {% for std in data %}
+    <tr>
+    <td>{{ std.name }}</td>
+    <td>{{ std.age }}</td>
+    <td>{{ std.dept }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
