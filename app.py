@@ -106,7 +106,5 @@ def update_task(id):
 # I need host, port
 if __name__ == '__main__':
     todo.run(
-        host='0.0.0.0',
-        port=5005,
         debug=True
     )
