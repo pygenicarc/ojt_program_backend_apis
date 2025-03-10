@@ -47,6 +47,20 @@ def create_todo():
     return jsonify({"message":"data added successfully !!!"})
 
 
+@todo.route('/get-data')
+def get_data():
+    import requests
+
+    url = "https://jsonplaceholder.typicode.com/posts"
+
+    payload = {}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    print(response.text)
+
+
 @todo.route('/delete/<int:id>', methods=['GET', 'DELETE'])
 def delete_task(id):
     task = Todo.query.get_or_404(id)
