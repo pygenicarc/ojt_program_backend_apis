@@ -49,16 +49,11 @@ todo = Flask(__name__)
 
 @todo.route('/get-data')
 def get_data():
-    import requests
-
-    url = "https://jsonplaceholder.typicode.com/posts"
-
-    payload = {}
-    headers = {}
-
-    response = requests.request("GET", url, headers=headers, data=payload)
-
-    return jsonify(response)
+    std = {
+        "name": "test",
+        "age": 20
+    }
+    return jsonify(std)
 
 
 # @todo.route('/delete/<int:id>', methods=['GET', 'DELETE'])
